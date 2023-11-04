@@ -1,0 +1,7 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  height: 100vh; /* This ensures the layout takes up the full height of the viewport */
+}
