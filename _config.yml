@@ -18,15 +18,15 @@ plugins:
 
 # collections
 collections:
-  authors:
+  type:
     output: true
 
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "type"
     values:
-      layout: "author"
+      layout: "type"
   - scope:
       path: ""
       type: "posts"

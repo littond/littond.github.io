@@ -1,0 +1,13 @@
+---
+title: School Projects
+---
+<h1> School Projects </h1>
+
+<ul>
+  {% for author in site.type %}
+    <li>
+    <h2><a href="{{ author.url }}">{{ author.type }}</a></h2>
+      <p>{{ author.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>

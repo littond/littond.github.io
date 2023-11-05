@@ -2,9 +2,9 @@
   link: /
 - name: About
   link: /about.html
-- name: School Work
-  link: /school.html
+- name: School Projects
+  link: /type/school.html
 - name: Personal Projects
-  link: /projects.html
+  link: /type/personal.html
 - name: Guides
-  link: /guides.html
+  link: /type/guide.html
