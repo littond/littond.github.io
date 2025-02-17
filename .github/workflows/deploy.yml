@@ -29,3 +29,4 @@ jobs:
           branch: gh-pages  # Deploy to gh-pages branch
           folder: dist  # Deploy the contents of the dist folder
           clean: true  # Removes old files in gh-pages branch
+          token: ${{ secrets.GH_PAT}}
