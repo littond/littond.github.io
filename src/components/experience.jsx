@@ -1,30 +1,32 @@
 import { info } from "../scripts/getInfo";
+import '../styles/Chip.css';
+import '../styles/Experience.css';
 
 export const Experience = () => {
     const { employment } = info;
     return (
-        <div>
-            <h1>Experience:</h1>
-            {employment.map(job => ExperienceCard(job))}
+        <div className="experience-container">
+            <h1 className="experience-title">Experience:</h1>
+            {employment.map(job => <ExperienceCard key={job.company} {...job} />)}
         </div>
     );
 }
 
-const ExperienceCard = (props) => {
+const ExperienceCard = ({ company, role, bio, tags }) => {
     return (
-        <div>
-            <p>Company: {props.company}</p>
-            <p>Role: {props.role}</p>
-            <p>Description: {props.bio}</p>
-            <div>
-                {props.tags.map(tag => Chip(tag))}
+        <div className="experience-card">
+            <p className="company">Company: {company}</p>
+            <p className="role">Role: {role}</p>
+            <p className="description">{bio}</p>
+            <div className="tags-container">
+                {tags.map(tag => <Chip key={tag}>{tag}</Chip>)}
             </div>
         </div>
     );
 }
 
-const Chip = (props) => {
+const Chip = ({ children }) => {
     return (
-        <div className="chip">{JSON.stringify(props)}</div>
+        <div className="chip">{children}</div>
     );
 }
