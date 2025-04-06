@@ -7,13 +7,12 @@
     height: 100vh;
 }
 
-/* Inner flex: sidebar + content row */
 .main-area {
     display: flex;
-    flex: 1;
-    /* take all remaining height */
-    overflow: hidden;
-    /* prevent double scrollbars */
+    /* no flex:1 or height:100vh needed here if you want natural page flow */
+    margin-left: 200px;
+    /* Same as sidebar width */
+    padding: 1rem;
 }
 
 /* Sidebar stays fixed width, full height of main-area */
@@ -30,6 +29,5 @@
     flex: 1;
     padding: 2rem;
     padding-bottom: 70px;
-    /* match your footer’s height */
-    overflow-y: auto;
+    /* no overflow specified */
 }
