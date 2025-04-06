@@ -1,6 +1,6 @@
-import { info } from "../scripts/getInfo";
-import '../styles/Chip.css';
-import '../styles/Experience.css';
+import { info } from "../../scripts/getInfo";
+import '../../styles/Chip.css';
+import '../../styles/Experience.css';
 
 export const Experience = () => {
     const { employment } = info;

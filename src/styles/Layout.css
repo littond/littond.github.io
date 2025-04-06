@@ -1,0 +1,35 @@
+/* src/styles/Layout.css */
+
+/* Outer flex: full height column */
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Inner flex: sidebar + content row */
+.main-area {
+    display: flex;
+    flex: 1;
+    /* take all remaining height */
+    overflow: hidden;
+    /* prevent double scrollbars */
+}
+
+/* Sidebar stays fixed width, full height of main-area */
+.sidebar {
+    width: 200px;
+    background: #f5f5f5;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Content flexes, scrolls if needed, with bottom padding for footer */
+.content {
+    flex: 1;
+    padding: 2rem;
+    padding-bottom: 70px;
+    /* match your footer’s height */
+    overflow-y: auto;
+}

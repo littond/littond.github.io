@@ -1,5 +1,5 @@
-import { info } from "../scripts/getInfo";
-import "../styles/About.css";
+import { info } from "../../scripts/getInfo";
+import "../../styles/About.css";
 
 export const About = () => {
     return (

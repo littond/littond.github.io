@@ -1,8 +1,8 @@
-import "../styles/SocialMediaFooter.css";
+import "../styles/Footer.css";
 import ghLogo from '/github-mark.svg'
 import lnLogo from '/LI-In-Bug.png'
 
-export const SocialMediaFooter = () => {
+export const Footer = () => {
     const media = [
         {
             name: "Github",
