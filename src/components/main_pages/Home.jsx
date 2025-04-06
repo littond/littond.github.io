@@ -6,7 +6,7 @@ export const Home = () => {
         <div>
             <div>Home Page</div>
             <About />
-            <Experience />
+            <Experience showAll={false} />
         </div>
     );
 }

@@ -2,15 +2,26 @@ import { info } from "../../scripts/getInfo";
 import '../../styles/Chip.css';
 import '../../styles/Experience.css';
 
-export const Experience = () => {
+export const Experience = ({ showAll = false }) => {
     const { employment } = info;
+
+    const filteredEmployment = showAll
+        ? employment
+        : employment.filter(job => job.end_date?.toLowerCase() === "present");
+
+    const title = showAll
+        ? "Experience:"
+        : `Current Job${filteredEmployment.length !== 1 ? "s" : ""}:`;
+
     return (
         <div className="experience-container">
-            <h1 className="experience-title">Experience:</h1>
-            {employment.map(job => <ExperienceCard key={job.company} {...job} />)}
+            <h1 className="experience-title">{title}</h1>
+            {filteredEmployment.map(job => (
+                <ExperienceCard key={job.company} {...job} />
+            ))}
         </div>
     );
-}
+};
 
 const ExperienceCard = ({ company, role, bio, tags }) => {
     return (
