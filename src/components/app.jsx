@@ -1,11 +1,11 @@
-import { Header } from './Header';
+import { Header } from './layout/Header';
 import { Home } from './main_pages/Home';
 import { Projects } from './main_pages/Projects';
 import { Blog } from './main_pages/Blog';
 import { About } from './main_pages/About';
-import { Footer } from './Footer';
+import { Footer } from './layout/Footer';
 import { Routes, Route } from 'react-router-dom';
-import '../styles/Layout.css';
+import '../styles/layout/Layout.css';
 
 export const App = () => (
   <div className="app-container">
