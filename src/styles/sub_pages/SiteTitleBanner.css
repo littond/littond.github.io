@@ -1,0 +1,19 @@
+.site-title-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.site-title-banner h1, h2 {
+    color: #64ffda;
+    margin: 0;
+}
+
+.site-title-banner h1 {
+    font-size: 4rem;
+}
+
+.site-title-banner h2 {
+    font-size: 2rem;
+}
