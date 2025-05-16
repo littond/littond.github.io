@@ -1,4 +1,4 @@
-import "../styles/Footer.css";
+import "../../styles/layout/Footer.css";
 import ghLogo from '/github-mark.svg'
 import lnLogo from '/LI-In-Bug.png'
 
