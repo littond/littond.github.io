@@ -4,6 +4,7 @@ import { Projects } from './main_pages/Projects';
 import { Blog } from './main_pages/Blog';
 import { About } from './main_pages/About';
 import { Footer } from './layout/Footer';
+import { ContentDetail } from './content/ContentDetail';
 import { Routes, Route } from 'react-router-dom';
 import '../styles/layout/Layout.css';
 
@@ -14,7 +15,9 @@ export const App = () => (
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:slug" element={<ContentDetail contentType="projects" />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<ContentDetail contentType="blog" />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </main>
