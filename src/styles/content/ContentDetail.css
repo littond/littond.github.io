@@ -1,0 +1,153 @@
+.content-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.content-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.content-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.content-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.content-date {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.content-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.content-tag {
+  background-color: #f0f0f0;
+  color: #555;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.content-body {
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+.content-body h1,
+.content-body h2,
+.content-body h3,
+.content-body h4,
+.content-body h5,
+.content-body h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.content-body h1 {
+  font-size: 2rem;
+}
+
+.content-body h2 {
+  font-size: 1.75rem;
+}
+
+.content-body h3 {
+  font-size: 1.5rem;
+}
+
+.content-body p {
+  margin-bottom: 1.5rem;
+}
+
+.content-body a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.content-body a:hover {
+  text-decoration: underline;
+}
+
+.content-body ul,
+.content-body ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.content-body li {
+  margin-bottom: 0.5rem;
+}
+
+.content-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.back-link {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.content-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.content-error {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.content-error h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.content-error p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-title {
+    font-size: 2rem;
+  }
+  
+  .content-body h1 {
+    font-size: 1.75rem;
+  }
+  
+  .content-body h2 {
+    font-size: 1.5rem;
+  }
+  
+  .content-body h3 {
+    font-size: 1.25rem;
+  }
+} 
