@@ -1,0 +1,32 @@
+name: Sync dev with main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  cascade:
+    runs-on: ubuntu-latest
+    steps:
+      # 1) Check out the dev branch (and fetch all history so merges work)
+      - uses: actions/checkout@v3
+        with:
+          ref: dev
+          fetch-depth: 0
+
+      # 2) Configure git user (so the merge commit is attributed)
+      - name: Set up Git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      # 3) Merge the updated main into dev
+      - name: Merge main into dev
+        run: |
+          git fetch origin main
+          git merge origin/main --no-edit
+
+      # 4) Push the result back to dev
+      - name: Push cascade merge
+        run: git push origin dev
