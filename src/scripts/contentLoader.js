@@ -6,7 +6,7 @@
 // Function to import all markdown files for a specific content type
 export async function getContentItems(contentType) {
   // Use static glob patterns instead of dynamic ones
-  const blogFiles = import.meta.glob('../content/blog_posts/*.md', { eager: true, as: 'raw' });
+  const blogFiles = import.meta.glob('../content/blogs/*.md', { eager: true, as: 'raw' });
   const projectFiles = import.meta.glob('../content/projects/*.md', { eager: true, as: 'raw' });
   
   // Select the appropriate files based on content type

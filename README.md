@@ -6,7 +6,7 @@ This is my personal website, built with React and Vite, showcasing my projects a
 
 ### Adding Blog Posts
 
-1. Create a new markdown file in `src/content/blog_posts/` with a descriptive filename
+1. Create a new markdown file in `src/content/blogs/` with a descriptive filename
 2. Add the required front matter at the top of the file:
 
 ```md

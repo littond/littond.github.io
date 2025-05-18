@@ -24,7 +24,6 @@ export const Footer = () => {
                         alt={platform.name}
                         className="social-icon"
                     />
-                    <span className="tooltip">{platform.name}</span>
                 </a>
             ))}
         </div>

@@ -7,7 +7,6 @@ export const Blog = () => {
     <ContentList 
       contentType="blog"
       title="Blog"
-      subtitle="Thoughts, ideas, and explorations in tech"
     />
   );
 };

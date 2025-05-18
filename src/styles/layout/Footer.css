@@ -1,49 +1,21 @@
-/* src/styles/Footer.css */
 .social-media-footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    padding: 2rem 0;
-    background-color: #0a192f;
-    width: 100%;
+    gap: 1rem;
+    padding: 1rem 0;
+    background-color: gray; /* background color of the footer */
 }
 
 .social-link {
-    position: relative;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
-}
-
-.social-link:hover {
-    transform: translateY(-5px);
+    width: 35px;
+    height: 35px;
 }
 
 .social-icon {
     width: 30px;
     height: 30px;
-    border-radius: 5px;
-}
-
-.tooltip {
-    position: absolute;
-    bottom: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #1a1a1a;
-    color: white;
-    padding: 0.3rem 0.6rem;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-}
-
-.social-link:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
 }
