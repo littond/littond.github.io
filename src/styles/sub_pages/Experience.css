@@ -43,8 +43,3 @@
     flex-wrap: wrap;
     gap: 0.5rem;
 }
-
-.job-tags .chip {
-    font-size: 12px;
-    padding: 4px 10px;
-}

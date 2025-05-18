@@ -1,0 +1,35 @@
+.chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+/* Size variations */
+.chip-small {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.chip-medium {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.chip-large {
+  font-size: 0.9rem;
+  padding: 0.35rem 0.7rem;
+}
+
+/* Interactive chips (with onClick) */
+.chip[role="button"] {
+  cursor: pointer;
+}
+
+.chip[role="button"]:hover {
+  opacity: 0.7;
+}
+
+.chip[role="button"]:active {
+  transform: scale(0.97);
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ContentCard } from './ContentCard';
+import { Chip } from '../utils/Chip';
 import { getContentItems, getAllTags } from '../../scripts/contentLoader';
 import '../../styles/content/ContentList.css';
 import '../../styles/utils/site_color.css';
@@ -40,20 +41,22 @@ export const ContentList = ({ contentType, title }) => {
       ) : (
         <>
           <div className="filter-container">
-            <button 
-              className={`filter-tag primary-bg tertiary-text ${selectedTag === 'all' ? 'active secondary-bg primary-text' : ''}`}
+            <Chip 
               onClick={() => setSelectedTag('all')}
+              isActive={selectedTag === 'all'}
+              size="large"
             >
               All
-            </button>
+            </Chip>
             {tags.map(tag => (
-              <button
+              <Chip
                 key={tag}
-                className={`filter-tag primary-bg tertiary-text ${selectedTag === tag ? 'active secondary-bg primary-text' : ''}`}
                 onClick={() => setSelectedTag(tag)}
+                isActive={selectedTag === tag}
+                size="large"
               >
                 {tag}
-              </button>
+              </Chip>
             ))}
           </div>
 

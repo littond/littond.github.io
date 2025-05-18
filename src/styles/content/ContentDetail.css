@@ -23,12 +23,6 @@
   gap: 0.5rem;
 }
 
-.content-tag {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-
 .content-body h1,
 .content-body h2,
 .content-body h3,

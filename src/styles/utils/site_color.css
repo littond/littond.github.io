@@ -19,3 +19,7 @@ body a {
 .accent-text {
     color: #7bb97f;
 }
+
+.chip.active {
+    background-color: #b2d0a6;
+}

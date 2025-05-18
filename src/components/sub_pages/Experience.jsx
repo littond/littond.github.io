@@ -1,4 +1,5 @@
 import { info } from "../../scripts/getInfo";
+import { Chip } from "../utils/Chip";
 import '../../styles/sub_pages/Experience.css';
 import '../../styles/utils/site_color.css';
 
@@ -24,7 +25,12 @@ export const Experience = ({ limit }) => {
                         <p className="job-description tertiary-text">{job.bio}</p>
                         <div className="job-tags">
                             {job.tags.map((tag, tagIndex) => (
-                                <div key={tagIndex} className="chip secondary-bg tertiary-text">{tag}</div>
+                                <Chip 
+                                    key={tagIndex} 
+                                    size="small"
+                                >
+                                    {tag}
+                                </Chip>
                             ))}
                         </div>
                     </div>

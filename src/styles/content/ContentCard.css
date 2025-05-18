@@ -24,12 +24,6 @@
   gap: 0.5rem;
 }
 
-.card-tag {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-
 .card-excerpt {
   margin-bottom: 1.5rem;
   flex-grow: 1;

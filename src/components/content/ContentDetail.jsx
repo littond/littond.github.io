@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getContentItems, getContentItemBySlug } from '../../scripts/contentLoader';
 import { MarkdownRenderer } from './MarkdownRenderer';
+import { Chip } from '../utils/Chip';
 import '../../styles/content/ContentDetail.css';
 import '../../styles/utils/site_color.css';
 
@@ -64,7 +65,7 @@ export const ContentDetail = ({ contentType }) => {
           <div className="content-date">{formattedDate}</div>
           <div className="content-tags">
             {item.tags && item.tags.map(tag => (
-              <span key={tag} className="content-tag secondary-bg">{tag}</span>
+              <Chip key={tag} size="small">{tag}</Chip>
             ))}
           </div>
         </div>

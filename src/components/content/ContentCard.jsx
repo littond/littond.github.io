@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Chip } from '../utils/Chip';
 import '../../styles/content/ContentCard.css';
 import '../../styles/utils/site_color.css';
 
@@ -17,7 +18,7 @@ export const ContentCard = ({ item, contentType }) => {
         <span className="card-date">{formattedDate}</span>
         <div className="card-tags">
           {item.tags.map(tag => (
-            <span key={tag} className="card-tag secondary-bg">{tag}</span>
+            <Chip key={tag} size="small">{tag}</Chip>
           ))}
         </div>
       </div>
