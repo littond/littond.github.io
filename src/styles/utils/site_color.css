@@ -1,25 +1,37 @@
+/*
+ * Background color: #fbfeee
+ * Text color: black
+ * Primary color: #b2d0a6
+ * Secondary color: #7bb97f
+ */
+
 body {
-    background-color: #fbfeee;
-    color: black;
+    background-color: #fbfeee; /* background color */
+    color: black; /* text color */
 }
 
 body a {
-    color: black;
+    color: black; /* text color */
+}
+
+.navigation .active {
+    color: black; /* text color */
+    text-decoration: underline;
 }
 
 .primary-bg {
-    background-color: #b2d0a6;
+    background-color: #b2d0a6; /* primary color */
 }
 
 .secondary-bg {
-    background-color: #7bb97f;
+    background-color: #7bb97f; /* secondary color */
 }
 
 .link-text a,
 .accent-text {
-    color: #7bb97f;
+    color: #7bb97f; /* secondary color */
 }
 
 .chip.active {
-    background-color: #b2d0a6;
+    background-color: #b2d0a6; /* primary color */
 }
