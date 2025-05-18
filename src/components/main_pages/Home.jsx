@@ -7,7 +7,6 @@ import "../../styles/main_pages/Home.css";
 export const Home = () => {
     return (
         <div className="home-container">
-            <SiteTitleBanner />
             <Bio page="home"/>
             <Experience limit={1} />
             <LatestContent contentType="projects" />
