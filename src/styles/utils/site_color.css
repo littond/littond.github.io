@@ -1,0 +1,44 @@
+.primary-bg {
+    background-color: black;
+}
+
+.secondary-bg {
+    background-color: gray;
+}
+
+.tertiary-bg {
+    background-color: lightgray;
+}
+
+.quaternary-bg {
+    background-color: white;
+}
+
+.accent-bg {
+    background-color: cyan;
+}
+
+.primary-text {
+    color: white;
+}
+
+.secondary-text {
+    color: black;
+}
+
+.tertiary-text {
+    color: gray;
+}
+
+.quaternary-text {
+    color: lightgray;
+}
+
+.accent-text {
+    color: cyan;
+}
+
+.link-text a {
+    color: cyan;
+}
+

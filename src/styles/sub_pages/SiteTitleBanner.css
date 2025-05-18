@@ -6,7 +6,7 @@
 }
 
 .site-title-banner h1, h2 {
-    color: #64ffda;
+    color: cyan; /* text color for the site title */
     margin: 0;
 }
 

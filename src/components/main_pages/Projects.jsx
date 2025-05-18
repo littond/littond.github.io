@@ -4,9 +4,11 @@ import '../../styles/main_pages/Projects.css';
 
 export const Projects = () => {
   return (
-    <ContentList 
-      contentType="projects"
-      title="Projects"
-    />
+    <div className="projects-container">
+      <ContentList
+        contentType="projects"
+        title="Projects"
+      />
+    </div>
   );
 }; 

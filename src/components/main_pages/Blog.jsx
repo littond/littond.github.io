@@ -4,9 +4,11 @@ import '../../styles/main_pages/Blog.css';
 
 export const Blog = () => {
   return (
-    <ContentList 
-      contentType="blog"
-      title="Blog"
-    />
+    <div className="blog-container">
+      <ContentList
+        contentType="blog"
+        title="Blog"
+      />
+    </div>
   );
 };
