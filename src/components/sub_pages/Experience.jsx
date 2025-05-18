@@ -1,5 +1,6 @@
 import { info } from "../../scripts/getInfo";
 import { Chip } from "../utils/Chip";
+import { SectionTitle } from "../utils/Section_Title";
 import '../../styles/sub_pages/Experience.css';
 import '../../styles/utils/site_color.css';
 
@@ -13,7 +14,7 @@ export const Experience = ({ limit }) => {
 
     return (
         <div className="employment-section">
-            <h2 className="section-title accent-text">{limit === 1 ? 'Current Job' : 'Experience'}</h2>
+            <SectionTitle>{limit === 1 ? 'Current Job' : 'Experience'}</SectionTitle>
             <div className="employment-timeline">
                 {jobsToDisplay.map((job, index) => (
                     <div key={index} className="job-card primary-bg">

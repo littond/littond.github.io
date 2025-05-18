@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ContentCard } from './ContentCard';
 import { Chip } from '../utils/Chip';
+import { SectionTitle } from '../utils/Section_Title';
 import { getContentItems, getAllTags } from '../../scripts/contentLoader';
 import '../../styles/content/ContentList.css';
 import '../../styles/utils/site_color.css';
@@ -34,7 +35,7 @@ export const ContentList = ({ contentType, title }) => {
 
   return (
     <div className="content-card-container">
-      <h1 className="page-title primary-text">{title}</h1>
+      <SectionTitle>{title}</SectionTitle>
 
       {isLoading ? (
         <div className="loading primary-text">Loading content...</div>

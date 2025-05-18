@@ -1,10 +1,11 @@
+import { SectionTitle } from "../utils/Section_Title";
 import "../../styles/sub_pages/Bio.css";
 import "../../styles/utils/site_color.css";
 
 export const Bio = ({ page = "home" }) => {
     return (
         <div className="bio-section">
-            <h1 className="section-title accent-text">Bio</h1>
+            <SectionTitle>Bio</SectionTitle>
             {page === "about" ? <LongBio /> : <ShortBio />}
         </div>
     );

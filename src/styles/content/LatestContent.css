@@ -5,8 +5,14 @@
 .section-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+/* Override some section title styles when it's in the header with view link */
+.section-header .with-view-link {
+  margin-bottom: 0;
+  flex: 1;
 }
 
 .section-title {
@@ -16,6 +22,7 @@
 .view-all-link {
   text-decoration: none;
   font-weight: 500;
+  margin-top: 0.5rem; /* Align with the section title text */
 }
 
 .view-all-link:hover {
