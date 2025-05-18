@@ -6,7 +6,7 @@ import { About } from './main_pages/About';
 import { Footer } from './layout/Footer';
 import { ContentDetail } from './content/ContentDetail';
 import { Routes, Route } from 'react-router-dom';
-import '../styles/layout/Layout.css';
+import '../styles/App.css';
 
 export const App = () => (
   <div className="app-container">

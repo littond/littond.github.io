@@ -6,8 +6,7 @@ export const Projects = () => {
   return (
     <ContentList 
       contentType="projects"
-      title="My Projects"
-      subtitle="Check out some of the projects I've been working on"
+      title="Projects"
     />
   );
 }; 

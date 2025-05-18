@@ -1,45 +1,24 @@
-.content-list-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.page-title {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.page-subtitle {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 2rem;
-}
-
-.tag-filter {
+.filter-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 2rem;
 }
 
 .filter-tag {
-  background-color: #f0f0f0;
+  background-color: white; /* background color of the unselected filter tag */
   border: none;
-  color: #555;
+  color: grey; /* text color of the unselected filter tag */
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.filter-tag:hover {
-  background-color: #e0e0e0;
-}
-
 .filter-tag.active {
-  background-color: #0066cc;
-  color: white;
+  background-color: cyan; /* background color of the selected filter tag */
+  color: white; /* text color of the selected filter tag */
 }
 
 .content-grid {
@@ -55,40 +34,13 @@
 .loading {
   text-align: center;
   padding: 2rem;
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 2rem;
+  color: white; /* text color of the loading text */
 }
 
 .no-results {
   text-align: center;
   padding: 2rem;
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 2rem;
+  color: white; /* text color of the no results text */
 }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .content-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .page-title {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .content-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .page-title {
-    font-size: 1.75rem;
-  }
-  
-  .page-subtitle {
-    font-size: 1rem;
-  }
-} 

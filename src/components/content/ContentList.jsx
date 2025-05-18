@@ -3,7 +3,7 @@ import { ContentCard } from './ContentCard';
 import { getContentItems, getAllTags } from '../../scripts/contentLoader';
 import '../../styles/content/ContentList.css';
 
-export const ContentList = ({ contentType, title, subtitle }) => {
+export const ContentList = ({ contentType, title }) => {
   const [items, setItems] = useState([]);
   const [tags, setTags] = useState([]);
   const [selectedTag, setSelectedTag] = useState('all');
@@ -31,15 +31,14 @@ export const ContentList = ({ contentType, title, subtitle }) => {
     : items.filter(item => item.tags && item.tags.includes(selectedTag));
 
   return (
-    <div className="content-list-container">
+    <div className="content-card-container">
       <h1 className="page-title">{title}</h1>
-      <p className="page-subtitle">{subtitle}</p>
 
       {isLoading ? (
         <div className="loading">Loading content...</div>
       ) : (
         <>
-          <div className="tag-filter">
+          <div className="filter-container">
             <button 
               className={`filter-tag ${selectedTag === 'all' ? 'active' : ''}`}
               onClick={() => setSelectedTag('all')}

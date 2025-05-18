@@ -56,7 +56,7 @@ export const ContentDetail = ({ contentType }) => {
   });
 
   return (
-    <div className="content-detail">
+    <div className="content-page">
       <div className="content-header">
         <h1 className="content-title">{item.title}</h1>
         <div className="content-meta">
