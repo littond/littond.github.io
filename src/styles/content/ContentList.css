@@ -7,9 +7,7 @@
 }
 
 .filter-tag {
-  background-color: white; /* background color of the unselected filter tag */
   border: none;
-  color: grey; /* text color of the unselected filter tag */
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
@@ -17,8 +15,6 @@
 }
 
 .filter-tag.active {
-  background-color: cyan; /* background color of the selected filter tag */
-  color: white; /* text color of the selected filter tag */
 }
 
 .content-grid {
@@ -35,12 +31,10 @@
   text-align: center;
   padding: 2rem;
   font-size: 2rem;
-  color: white; /* text color of the loading text */
 }
 
 .no-results {
   text-align: center;
   padding: 2rem;
   font-size: 2rem;
-  color: white; /* text color of the no results text */
 }

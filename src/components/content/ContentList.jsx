@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ContentCard } from './ContentCard';
 import { getContentItems, getAllTags } from '../../scripts/contentLoader';
 import '../../styles/content/ContentList.css';
+import '../../styles/utils/site_color.css';
 
 export const ContentList = ({ contentType, title }) => {
   const [items, setItems] = useState([]);
@@ -32,15 +33,15 @@ export const ContentList = ({ contentType, title }) => {
 
   return (
     <div className="content-card-container">
-      <h1 className="page-title">{title}</h1>
+      <h1 className="page-title primary-text">{title}</h1>
 
       {isLoading ? (
-        <div className="loading">Loading content...</div>
+        <div className="loading primary-text">Loading content...</div>
       ) : (
         <>
           <div className="filter-container">
             <button 
-              className={`filter-tag ${selectedTag === 'all' ? 'active' : ''}`}
+              className={`filter-tag primary-bg tertiary-text ${selectedTag === 'all' ? 'active secondary-bg primary-text' : ''}`}
               onClick={() => setSelectedTag('all')}
             >
               All
@@ -48,7 +49,7 @@ export const ContentList = ({ contentType, title }) => {
             {tags.map(tag => (
               <button
                 key={tag}
-                className={`filter-tag ${selectedTag === tag ? 'active' : ''}`}
+                className={`filter-tag primary-bg tertiary-text ${selectedTag === tag ? 'active secondary-bg primary-text' : ''}`}
                 onClick={() => setSelectedTag(tag)}
               >
                 {tag}
@@ -57,7 +58,7 @@ export const ContentList = ({ contentType, title }) => {
           </div>
 
           {filteredItems.length === 0 ? (
-            <div className="no-results">No items found.</div>
+            <div className="no-results primary-text">No items found.</div>
           ) : (
             <div className="content-grid">
               {filteredItems.map((item, index) => (

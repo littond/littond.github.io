@@ -1,44 +1,21 @@
-.primary-bg {
-    background-color: black;
-}
-
-.secondary-bg {
-    background-color: gray;
-}
-
-.tertiary-bg {
-    background-color: lightgray;
-}
-
-.quaternary-bg {
-    background-color: white;
-}
-
-.accent-bg {
-    background-color: cyan;
-}
-
-.primary-text {
-    color: white;
-}
-
-.secondary-text {
+body {
+    background-color: #fbfeee;
     color: black;
 }
 
-.tertiary-text {
-    color: gray;
+body a {
+    color: black;
 }
 
-.quaternary-text {
-    color: lightgray;
+.primary-bg {
+    background-color: #b2d0a6;
 }
 
+.secondary-bg {
+    background-color: #7bb97f;
+}
+
+.link-text a,
 .accent-text {
-    color: cyan;
+    color: #7bb97f;
 }
-
-.link-text a {
-    color: cyan;
-}
-

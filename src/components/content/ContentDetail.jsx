@@ -64,7 +64,7 @@ export const ContentDetail = ({ contentType }) => {
           <div className="content-date">{formattedDate}</div>
           <div className="content-tags">
             {item.tags && item.tags.map(tag => (
-              <span key={tag} className="content-tag tertiary-bg">{tag}</span>
+              <span key={tag} className="content-tag secondary-bg">{tag}</span>
             ))}
           </div>
         </div>

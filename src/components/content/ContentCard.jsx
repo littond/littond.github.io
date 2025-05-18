@@ -11,13 +11,13 @@ export const ContentCard = ({ item, contentType }) => {
   });
 
   return (
-    <div className="content-card quaternary-bg">
+    <div className="content-card primary-bg">
       <h2 className="card-title secondary-text">{item.title}</h2>
       <div className="card-meta tertiary-text">
         <span className="card-date">{formattedDate}</span>
         <div className="card-tags">
           {item.tags.map(tag => (
-            <span key={tag} className="card-tag tertiary-bg">{tag}</span>
+            <span key={tag} className="card-tag secondary-bg">{tag}</span>
           ))}
         </div>
       </div>
