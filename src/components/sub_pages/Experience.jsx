@@ -1,4 +1,5 @@
 import { info } from "../../scripts/getInfo";
+import '../../styles/sub_pages/Experience.css';
 
 export const Experience = ({ limit }) => {
     const { employment } = info;
@@ -28,11 +29,6 @@ export const Experience = ({ limit }) => {
                     </div>
                 ))}
             </div>
-            {limit && !isNaN(limit) && limit > 0 && limit < employment.length && (
-                <div className="show-more-container">
-                    <p className="jobs-count">Showing {limit} of {employment.length} jobs</p>
-                </div>
-            )}
         </div>
     );
 };
