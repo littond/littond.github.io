@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getContentItems, getContentItemBySlug } from '../../scripts/contentLoader';
 import { MarkdownRenderer } from './MarkdownRenderer';
+import { Chip } from '../utils/Chip';
 import '../../styles/content/ContentDetail.css';
+import '../../styles/utils/site_color.css';
 
 export const ContentDetail = ({ contentType }) => {
   const { slug } = useParams();
@@ -34,12 +36,12 @@ export const ContentDetail = ({ contentType }) => {
   }, [contentType, slug]);
 
   if (isLoading) {
-    return <div className="content-loader">Loading content...</div>;
+    return <div className="content-loader primary-text">Loading content...</div>;
   }
 
   if (error || !item) {
     return (
-      <div className="content-error">
+      <div className="content-error primary-text">
         <h1>Content Not Found</h1>
         <p>{error || 'The requested content could not be found.'}</p>
         <Link to={`/${contentType}`} className="back-link">
@@ -58,23 +60,23 @@ export const ContentDetail = ({ contentType }) => {
   return (
     <div className="content-page">
       <div className="content-header">
-        <h1 className="content-title">{item.title}</h1>
-        <div className="content-meta">
+        <h1 className="content-title primary-text">{item.title}</h1>
+        <div className="content-meta tertiary-text">
           <div className="content-date">{formattedDate}</div>
           <div className="content-tags">
             {item.tags && item.tags.map(tag => (
-              <span key={tag} className="content-tag">{tag}</span>
+              <Chip key={tag} size="small">{tag}</Chip>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="content-body">
+      <div className="content-body link-text">
         <MarkdownRenderer content={item.content} />
       </div>
 
       <div className="content-footer">
-        <Link to={`/${contentType}`} className="back-link">
+        <Link to={`/${contentType}`} className="back-link accent-text">
           ← Back to {contentType === 'blog' ? 'Blog' : 'Projects'}
         </Link>
       </div>

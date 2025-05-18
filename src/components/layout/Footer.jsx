@@ -1,4 +1,5 @@
 import "../../styles/layout/Footer.css";
+import "../../styles/utils/site_color.css";
 import ghLogo from '/github-mark.svg'
 import lnLogo from '/LI-In-Bug.png'
 
@@ -16,7 +17,7 @@ export const Footer = () => {
         }
     ];
     return (
-        <div className="social-media-footer">
+        <div className="social-media-footer primary-bg">
             {media.map((platform) => (
                 <a key={platform.name} href={platform.site} target="_blank" rel="noopener noreferrer" className="social-link">
                     <img

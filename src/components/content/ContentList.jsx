@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ContentCard } from './ContentCard';
+import { Chip } from '../utils/Chip';
 import { getContentItems, getAllTags } from '../../scripts/contentLoader';
 import '../../styles/content/ContentList.css';
+import '../../styles/utils/site_color.css';
 
 export const ContentList = ({ contentType, title }) => {
   const [items, setItems] = useState([]);
@@ -32,32 +34,34 @@ export const ContentList = ({ contentType, title }) => {
 
   return (
     <div className="content-card-container">
-      <h1 className="page-title">{title}</h1>
+      <h1 className="page-title primary-text">{title}</h1>
 
       {isLoading ? (
-        <div className="loading">Loading content...</div>
+        <div className="loading primary-text">Loading content...</div>
       ) : (
         <>
           <div className="filter-container">
-            <button 
-              className={`filter-tag ${selectedTag === 'all' ? 'active' : ''}`}
+            <Chip 
               onClick={() => setSelectedTag('all')}
+              isActive={selectedTag === 'all'}
+              size="large"
             >
               All
-            </button>
+            </Chip>
             {tags.map(tag => (
-              <button
+              <Chip
                 key={tag}
-                className={`filter-tag ${selectedTag === tag ? 'active' : ''}`}
                 onClick={() => setSelectedTag(tag)}
+                isActive={selectedTag === tag}
+                size="large"
               >
                 {tag}
-              </button>
+              </Chip>
             ))}
           </div>
 
           {filteredItems.length === 0 ? (
-            <div className="no-results">No items found.</div>
+            <div className="no-results primary-text">No items found.</div>
           ) : (
             <div className="content-grid">
               {filteredItems.map((item, index) => (

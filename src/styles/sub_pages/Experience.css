@@ -3,7 +3,6 @@
 }
 
 .section-title {
-    color: cyan; /* text color for the section title */
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -15,7 +14,6 @@
 }
 
 .job-card {
-    background-color: white; /* background color for the job card */
     border-radius: 8px;
     padding: 1rem;
 }
@@ -27,32 +25,21 @@
 }
 
 .company-name {
-    color: black; /* text color for the company name */
     margin: 0;
 }
 
 .job-duration {
-    color: gray; /* text color for the job duration */
     margin: 0;
 }
 
 .job-title {
-    color: black; /* text color for the job title */
 }
 
 .job-description {
-    color: gray; /* text color for the job description */
 }
 
 .job-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-}
-
-.job-tags .chip {
-    background-color: lightgray;
-    color: gray;
-    font-size: 12px;
-    padding: 4px 10px;
 }

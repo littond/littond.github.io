@@ -1,5 +1,4 @@
 .header {
-  background-color: gray; /* background color of the header */
   position: sticky;
   top: 0;
 }
@@ -19,11 +18,10 @@
 }
 
 .navigation a {
-  color: white; /* text color of the links */
   text-decoration: none;
 }
 
-.navigation a:hover,
-.navigation .active {
-  color: cyan; /* text color of the active link */
+
+.navigation a:hover {
+  opacity: 0.7;
 }

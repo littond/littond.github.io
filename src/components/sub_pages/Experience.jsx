@@ -1,5 +1,7 @@
 import { info } from "../../scripts/getInfo";
+import { Chip } from "../utils/Chip";
 import '../../styles/sub_pages/Experience.css';
+import '../../styles/utils/site_color.css';
 
 export const Experience = ({ limit }) => {
     const { employment } = info;
@@ -11,19 +13,24 @@ export const Experience = ({ limit }) => {
 
     return (
         <div className="employment-section">
-            <h2 className="section-title">{limit === 1 ? 'Current Job' : 'Experience'}</h2>
+            <h2 className="section-title accent-text">{limit === 1 ? 'Current Job' : 'Experience'}</h2>
             <div className="employment-timeline">
                 {jobsToDisplay.map((job, index) => (
-                    <div key={index} className="job-card">
+                    <div key={index} className="job-card primary-bg">
                         <div className="job-header">
-                            <h3 className="company-name">{job.company}</h3>
-                            <p className="job-duration">{job.start_date} - {job.end_date}</p>
+                            <h3 className="company-name secondary-text">{job.company}</h3>
+                            <p className="job-duration tertiary-text">{job.start_date} - {job.end_date}</p>
                         </div>
-                        <p className="job-title">{job.role}</p>
-                        <p className="job-description">{job.bio}</p>
+                        <p className="job-title secondary-text">{job.role}</p>
+                        <p className="job-description tertiary-text">{job.bio}</p>
                         <div className="job-tags">
                             {job.tags.map((tag, tagIndex) => (
-                                <div key={tagIndex} className="chip">{tag}</div>
+                                <Chip 
+                                    key={tagIndex} 
+                                    size="small"
+                                >
+                                    {tag}
+                                </Chip>
                             ))}
                         </div>
                     </div>

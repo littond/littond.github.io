@@ -7,9 +7,10 @@ import { Footer } from './layout/Footer';
 import { ContentDetail } from './content/ContentDetail';
 import { Routes, Route } from 'react-router-dom';
 import '../styles/App.css';
+import '../styles/utils/site_color.css';
 
 export const App = () => (
-  <div className="app-container">
+  <div className="app-container primary-text">
     <Header />
     <main className="main-content">
       <Routes>
