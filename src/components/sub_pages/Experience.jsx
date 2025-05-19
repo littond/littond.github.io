@@ -23,7 +23,13 @@ export const Experience = ({ limit }) => {
                             <p className="job-duration tertiary-text">{job.start_date} - {job.end_date}</p>
                         </div>
                         <p className="job-title secondary-text">{job.role}</p>
-                        <p className="job-description tertiary-text">{job.bio}</p>
+                        
+                        <ul className="job-bio-list tertiary-text">
+                            {job.bio.map((item, bioIndex) => (
+                                <li key={bioIndex}>{item}</li>
+                            ))}
+                        </ul>
+                        
                         <div className="job-tags">
                             {job.tags.map((tag, tagIndex) => (
                                 <Chip 

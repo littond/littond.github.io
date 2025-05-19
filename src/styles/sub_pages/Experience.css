@@ -28,6 +28,21 @@
 }
 
 .job-title {
+    margin-bottom: 0.75rem;
+}
+
+.job-bio-list {
+    margin-top: 0;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.job-bio-list li {
+    margin-bottom: 0.5rem;
+}
+
+.job-bio-list li:last-child {
+    margin-bottom: 0;
 }
 
 .job-description {
