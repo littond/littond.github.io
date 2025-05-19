@@ -1,6 +1,6 @@
 ---
 title: Building My Portfolio Website with AI Agents
-date: 2024-09-10
+date: 2025-05-18
 slug: building-with-ai-agents
 tags: [AI, Development, Web Design, Cursor]
 excerpt: My insights and experiences after using AI agents in Cursor to build my personal portfolio website, from initial impressions to practical applications and limitations.
