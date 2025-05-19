@@ -40,13 +40,11 @@ export const LatestContent = ({ contentType }) => {
       {isLoading ? (
         <div className="loading-content primary-text">Loading content...</div>
       ) : item ? (
-        <div className="latest-content-container">
           <ContentCard 
             item={item} 
             contentType={contentType} 
             referrer="home"
           />
-        </div>
       ) : (
         <div className="no-content primary-text">No {contentType} content found.</div>
       )}

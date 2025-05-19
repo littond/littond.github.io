@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Chip } from '../utils/Chip';
 import '../../styles/content/ContentCard.css';
 import '../../styles/utils/site_color.css';
+import '../../styles/content/LatestContent.css';
 
 export const ContentCard = ({ item, contentType, referrer }) => {
   const formattedDate = new Date(item.date).toLocaleDateString('en-US', {
@@ -17,9 +18,10 @@ export const ContentCard = ({ item, contentType, referrer }) => {
     : `/${contentType}/${item.slug}`;
 
   return (
-    <div className="content-card primary-bg">
-      <h2 className="card-title secondary-text">{item.title}</h2>
-      <div className="card-meta tertiary-text">
+    <div className="latest-content-container primary-bg"> 
+      <div className="content-card primary-bg">
+        <h2 className="card-title secondary-text">{item.title}</h2>
+        <div className="card-meta tertiary-text">
         <span className="card-date">{formattedDate}</span>
         <div className="card-tags">
           {item.tags.map(tag => (
@@ -31,6 +33,7 @@ export const ContentCard = ({ item, contentType, referrer }) => {
       <Link to={linkTo} className="accent-text read-more">
         Read More →
       </Link>
+    </div>
     </div>
   );
 }; 
