@@ -1,6 +1,6 @@
 ---
 title: Personal Portfolio Website
-date: 2024-09-01
+date: 2025-05-18
 slug: personal-portfolio-website
 tags: [React, Vite, GitHub Pages, CSS]
 excerpt: A deep dive into the development of my personal portfolio website, exploring the tech stack, design decisions, and implementation details.
