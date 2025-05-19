@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ContentCard } from './ContentCard';
+import { SectionTitle } from '../utils/Section_Title';
 import { getContentItems } from '../../scripts/contentLoader';
 import '../../styles/content/LatestContent.css';
 import '../../styles/utils/site_color.css';
@@ -31,13 +33,19 @@ export const LatestContent = ({ contentType }) => {
 
   return (
     <div className="latest-content-section">
-      <h2 className="section-title accent-text">{title}</h2>
+      <div className="section-header">
+        <SectionTitle className="with-view-link">{title}</SectionTitle>
+      </div>
       
       {isLoading ? (
         <div className="loading-content primary-text">Loading content...</div>
       ) : item ? (
         <div className="latest-content-container">
-          <ContentCard item={item} contentType={contentType} />
+          <ContentCard 
+            item={item} 
+            contentType={contentType} 
+            referrer="home"
+          />
         </div>
       ) : (
         <div className="no-content primary-text">No {contentType} content found.</div>

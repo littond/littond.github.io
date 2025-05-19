@@ -4,12 +4,17 @@ import { Chip } from '../utils/Chip';
 import '../../styles/content/ContentCard.css';
 import '../../styles/utils/site_color.css';
 
-export const ContentCard = ({ item, contentType }) => {
+export const ContentCard = ({ item, contentType, referrer }) => {
   const formattedDate = new Date(item.date).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
   });
+
+  // Build the link with referrer if provided
+  const linkTo = referrer 
+    ? `/${contentType}/${item.slug}?from=${referrer}` 
+    : `/${contentType}/${item.slug}`;
 
   return (
     <div className="content-card primary-bg">
@@ -23,7 +28,7 @@ export const ContentCard = ({ item, contentType }) => {
         </div>
       </div>
       <p className="card-excerpt tertiary-text">{item.excerpt}</p>
-      <Link to={`/${contentType}/${item.slug}`} className="accent-text read-more">
+      <Link to={linkTo} className="accent-text read-more">
         Read More →
       </Link>
     </div>

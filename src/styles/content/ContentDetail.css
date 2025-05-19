@@ -83,3 +83,17 @@
   text-align: center;
   padding: 3rem 1rem;
 }
+
+.content-nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.back-link, .see-more-link {
+  text-decoration: none;
+}
+
+.back-link:hover, .see-more-link:hover {
+  text-decoration: underline;
+}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useSearchParams } from 'react-router-dom';
 import { getContentItems, getContentItemBySlug } from '../../scripts/contentLoader';
 import { MarkdownRenderer } from './MarkdownRenderer';
 import { Chip } from '../utils/Chip';
@@ -8,6 +8,8 @@ import '../../styles/utils/site_color.css';
 
 export const ContentDetail = ({ contentType }) => {
   const { slug } = useParams();
+  const [searchParams] = useSearchParams();
+  const referrer = searchParams.get('from');
   const [item, setItem] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -44,8 +46,8 @@ export const ContentDetail = ({ contentType }) => {
       <div className="content-error primary-text">
         <h1>Content Not Found</h1>
         <p>{error || 'The requested content could not be found.'}</p>
-        <Link to={`/${contentType}`} className="back-link">
-          ← Back to {contentType === 'blog' ? 'Blog' : 'Projects'}
+        <Link to={referrer === 'home' ? '/' : `/${contentType}`} className="back-link accent-text">
+          ← Back to {referrer === 'home' ? 'Home' : contentType === 'blog' ? 'Blog' : 'Projects'}
         </Link>
       </div>
     );
@@ -56,6 +58,14 @@ export const ContentDetail = ({ contentType }) => {
     month: 'long',
     day: 'numeric'
   });
+
+  // Get the appropriate back link text
+  const backLinkText = referrer === 'home' 
+    ? '← Back to Home' 
+    : `← Back to ${contentType === 'blog' ? 'Blog' : 'Projects'}`;
+
+  // Get the appropriate back link destination
+  const backLinkTo = referrer === 'home' ? '/' : `/${contentType}`;
 
   return (
     <div className="content-page">
@@ -76,9 +86,17 @@ export const ContentDetail = ({ contentType }) => {
       </div>
 
       <div className="content-footer">
-        <Link to={`/${contentType}`} className="back-link accent-text">
-          ← Back to {contentType === 'blog' ? 'Blog' : 'Projects'}
-        </Link>
+        <div className="content-nav-links">
+          <Link to={backLinkTo} className="back-link accent-text">
+            {backLinkText}
+          </Link>
+          
+          {referrer === 'home' && (
+            <Link to={`/${contentType}`} className="see-more-link accent-text">
+              See more {contentType === 'blog' ? 'blog posts' : 'projects'} →
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );
