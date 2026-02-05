@@ -57,6 +57,23 @@
   text-decoration: underline;
 }
 
+.content-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.content-body th,
+.content-body td {
+  border: 1px solid currentColor;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.content-body th {
+  font-weight: 600;
+}
+
 .content-footer {
   margin-top: 2rem;
   padding-top: 1.5rem;
